@@ -2,12 +2,10 @@ name: Upstream Sync
 
 permissions:
   contents: write
-  issues: write
-  actions: write
 
 on:
   schedule:
-    - cron: '0 * * * *' # every hour
+    - cron: '0 */12 * * *' # 每12小时执行一次
   workflow_dispatch:
 
 jobs:
